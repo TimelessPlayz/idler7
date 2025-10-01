@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: steam-idler
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: STEAM_USER
+        sync: false
+      - key: STEAM_PASS
+        sync: false
